@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <h1>Student List</h1>
+  <div class="container">
+    <a href="/add" class="btn">➕ Add New Student</a>
+    <ul class="student-list">
+      <% students.forEach(student => { %>
+        <li>
+          <span><%= student.name %> | <%= student.age %> | <%= student.grade %></span>
+          <div>
+            <a href="/edit/<%= student._id %>" class="edit-btn">✏️ Edit</a>
+            <a href="/delete/<%= student._id %>" class="delete-btn">🗑️ Delete</a>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

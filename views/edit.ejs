@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Student</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <h1>Edit Student</h1>
+  <div class="container">
+    <form action="/edit/<%= student._id %>" method="POST" class="form">
+      <label>Name:</label>
+      <input name="name" value="<%= student.name %>" required />
+      <label>Age:</label>
+      <input name="age" value="<%= student.age %>" required />
+      <label>Grade:</label>
+      <input name="grade" value="<%= student.grade %>" required />
+      <button type="submit" class="btn">Update</button>
+    </form>
+    <a href="/" class="back-link">⬅ Back</a>
+  </div>
+</body>
+</html>
