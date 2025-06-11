@@ -7,7 +7,8 @@ const studentRoutes = require("./routes/studentRoutes");
 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 app.use(express.static("public"));
 mongoose
   .connect("mongodb+srv://ksharishcs:Hrxz@cluster0.dzr7anj.mongodb.net/STUDENTDB2?retryWrites=true&w=majority&appName=Cluster0"
