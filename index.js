@@ -10,7 +10,8 @@ const app = express();
 const PORT = 3000;
 app.use(express.static("public"));
 mongoose
-  .connect("mongodb://127.0.0.1:27017/STUDENTDB2")
+  .connect("mongodb+srv://ksharishcs20:<Hrxz>@cluster0.dzr7anj.mongodb.net/STUDENTDB2?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("DB Error:", err));
 
